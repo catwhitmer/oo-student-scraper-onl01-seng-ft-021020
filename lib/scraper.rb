@@ -11,9 +11,10 @@ def self.scrape_index_page(index_url)
       name = student.css(".student-name").text
       location = student.css(".student-location").text
       profile_url = student.css("a").attribute("href").value
-      student_info = {:name => name,
-                :location => location,
-                :profile_url => profile_url}
+      student_info = {
+        :name => name,
+        :location => location,
+        :profile_url => profile_url}
       students << student_info
       end
     students
