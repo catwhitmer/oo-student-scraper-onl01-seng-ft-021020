@@ -21,9 +21,9 @@ class Scraper
     doc = Nokogiri::HTML(open(profile_url))
     student = {}
     
-    student[:name] = doc.search(<h1 class="profile-name">Ryan Johnson</h1>)
-    student[:location] = doc.search(<h2 class="profile-location">New York, NY</h2>)
-    student[:profile_url] = doc.search(profile_url)
+    student[:name] = doc.search(<h1 class="profile-name">Ryan Johnson</h1>).text
+    student[:location] = doc.search(<h2 class="profile-location">New York, NY</h2>).text
+    student[:profile_url] = doc.search(profile_url).text
     
     student
   end
