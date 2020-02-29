@@ -23,7 +23,7 @@ class Scraper
     
     student[:name] = doc.search(<h1 class="profile-name">Ryan Johnson</h1>)
     student[:location] = doc.search(<h2 class="profile-location">New York, NY</h2>)
-    student[:profile_url] = doc.search()
+    student[:profile_url] = doc.search(profile_url)
     
     student
   end
